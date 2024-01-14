@@ -35,7 +35,7 @@ export const action = (store) => async ({ request }) => {
     try {
       const response = await customFetch.post('/auth/local', {
         identifier: 'test@test.com',
-        password: '123123',
+        password: 'secret',
       });
 
       dispatch(loginUser(response.data));
